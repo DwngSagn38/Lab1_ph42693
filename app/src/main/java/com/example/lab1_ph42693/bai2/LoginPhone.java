@@ -90,8 +90,14 @@ public class LoginPhone extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // b8 : gọi hàm check mã otp để login
-                verifyOTP(txtOTP.getText().toString().trim());
+                String otp = txtOTP.getText().toString().trim();
+                if (otp.isEmpty()){
+                    Toast.makeText(LoginPhone.this, "Vui lòng điền mã otp", Toast.LENGTH_SHORT).show();
+                }else {
+                    // b8 : gọi hàm check mã otp để login
+                    verifyOTP(otp);
+                }
+
             }
         });
 

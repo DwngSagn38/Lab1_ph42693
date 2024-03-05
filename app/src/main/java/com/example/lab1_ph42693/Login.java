@@ -61,7 +61,11 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = txtEmail.getText().toString().trim();
-                sendCode(email);
+                if (email.isEmpty()){
+                    Toast.makeText(Login.this, "Vui lòng nhập email để reset password", Toast.LENGTH_SHORT).show();
+                }else {
+                    sendCode(email);
+                }
             }
         });
 

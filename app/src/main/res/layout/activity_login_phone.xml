@@ -59,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtOTP"
                 android:hint="Nhập OTP"
+                android:inputType="number"
                 android:background="@drawable/input"
                 android:paddingStart="12dp"
                 android:layout_margin="14dp"/>
